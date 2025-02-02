@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instructions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      nav {
+        background-color: #eff3ea;
+      }
+    </style>
+    <script>
+      function toggleMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+      }
+    </script>
+  </head>
+  <body class="bg-gray-50">
+    <nav class="relative  fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-24">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <img
+              src="./Resonance-logo.svg"
+              alt="NOVA Logo"
+              class="mr-2"
+              style="height: 150px; width: 150px"
+            />
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="./index.html"
+              class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              >Home</a
+            >
+            <a
+              href="./download.html"
+              class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              >Get App</a
+            >
+            <a
+              href="./resources.html"
+              class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              >Resources</a
+            >
+            <a
+              href="./about.html"
+              class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              >About</a
+            >
+            <a
+              class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity duration-200 flex items-center text-[22px]"
+              href="#contact"
+            >
+              Contact Us
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button
+              onclick="toggleMenu()"
+              class="text-gray-400 hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a
+              href="./index.html"
+              class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              >Get App</a
+            >
+            <a
+              href="./resources.html"
+              class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              >Resources</a
+            >
+            <a
+              href="./about.html"
+              class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              >About</a
+            >
+            <a
+              class="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity duration-200 flex items-center justify-center text-gray-700 text-[22px]"
+              href="#contact"
+            >
+              Contact Us
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="   text-gray-600 py-8" style="background-color: #e0e0e0">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-8">
+          Instructions for Resonance Healing App
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-1 gap-12">
+          <!-- Left Column: Content Description -->
+          <div class="text-lg leading-relaxed space-y-6">
+            <p>
+              The <strong>Resonance Healing App</strong> is a perfect choice for
+              those who want to ingest remedies and affirmations in daily
+              rituals, as integrative medicine (holistically); what shapes your
+              trajectory in life.
+            </p>
+            <p>It is also for practitioners of:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Homeopathy</li>
+              <li>(Subtle) Energy</li>
+              <li>Quantum & Frequency</li>
+              <li>Spectro-chrome / Colour</li>
+              <li>Aqua (Water) Healing</li>
+              <li>Ayurveda</li>
+              <li>Chakra</li>
+              <li>Reiki</li>
+              <li>Biogemetry</li>
+              <li>Bio-Resonance & Biofield</li>
+              <li>Essential Oils & Skin Care</li>
+              <li>PEMF Healing</li>
+              <li>Electro-Herbal</li>
+              <li>e-Medicine</li>
+              <li>Cell / Tissue Salts</li>
+              <li>Detox Energetics</li>
+              <li>Bach flowers (and other flowers)</li>
+              <li>Phyto-biophysics</li>
+              <li>Meridians</li>
+              <li>Radiesthesia</li>
+              <li>Radionics & Radionic Rates</li>
+              <li>Pet Behaviours & Animal Vitality</li>
+              <li>Essential Nutrients</li>
+              <li>Relationships & Emotional Therapies</li>
+              <li>Mental Wellness</li>
+              <li>Trauma Recoveries</li>
+              <li>Plant Vitality</li>
+              <li>EMF/5G Protection</li>
+              <li>Many more...</li>
+            </ul>
+            <p>
+              This App ingests & imprints remedy information directly by a touch
+              on screen and then to any material placed on the "Receive" well.
+              It also broadcasts remedy information for distant / remote healing
+              to anybody (no matter what the distance). It also copies remedies
+              from existing remedies and saves remedy information for recalling
+              at a later date.
+            </p>
+            <p>
+              Designed to be user-friendly, simply type in the remedy
+              information, or type the command "COPY", select the potency you
+              may require, set the timer, place your blank tablets, glass of
+              water, or any other material (even gemstones or crystals) in the
+              Receive well, and your remedy will be ready.
+            </p>
+            <p>
+              The one word for this App is <strong>flexibility</strong>, and it
+              opens up a whole new world of therapeutic possibilities. The way
+              the App operates, there is no limit as to what remedy / healing
+              affirmation (the illness description itself) might be.
+            </p>
+            <p>
+              Homeopathic remedies and information can be prepared or
+              transmitted (remotely to anyone) with potencies ranging from 1 –
+              9999 X, C, M, CM, MM, and LM or D. If no potency is required, both
+              potency boxes can be cleared.
+            </p>
+            <p>
+              Choose your favorite remedies, information, affirmations, or COPY
+              your Biofield directly into the favorite carrier materials, or
+              broadcast through the "witness" (e.g., a picture of yourself, a
+              hair sample, etc.).
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="py-20" style="background-color: #e0e0e0">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="relative">
+          <!-- Large "Visit My Resources" Button -->
+          <a
+            href="./download.html"
+            class="inline-block bg-gradient-to-r from-yellow-400 to-red-500 text-white text-4xl font-bold py-4 px-8 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300"
+          >
+            Get App
+          </a>
+
+          <!-- Overlay (Optional) -->
+          <!-- <div class="absolute inset-0 bg-black opacity-30 z-10"></div> -->
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
+          <!-- Subscribe Form -->
+          <div class="">
+            <h3 class="text-2xl font-bold mb-4 whitespace-nowrap">
+              Subscribe to Our Newsletter
+            </h3>
+            <form action="#" method="POST" class="flex space-x-4">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                class="p-3 rounded-lg text-gray-800 w-full md:w-64"
+                required
+              />
+              <button
+                type="submit"
+                class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-lg font-semibold hover:opacity-90 transition-opacity duration-200"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+          <!-- Disclaimer Section -->
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Disclaimer</h3>
+            <p class="text-sm text-gray-400 text-xl">
+              Resonance Healing is not intended to replace professional medical
+              advice or approved treatments. It is not intended to diagnose, or
+              treat any health condition.
+            </p>
+          </div>
+
+          <!-- Social Links -->
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-facebook-f text-2xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-twitter text-2xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-linkedin-in text-2xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-instagram text-2xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Copyright Section -->
+          <div class="md:col-span-2 lg:col-span-1">
+            <p class="text-sm text-gray-400">
+              &copy; 2025 Resonance Healing. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
