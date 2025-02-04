@@ -133,6 +133,24 @@
           opacity: 0; /* End the group fade-out after all sentences */
         }
       }
+      ul {
+      list-style-type: none; /* Remove default bullet points */
+      padding-left: 0;
+    }
+    
+    ul li {
+      margin-bottom: 10px; /* Adds a gap between list items */
+      position: relative;
+    }
+    
+    ul li::before {
+      content: '•'; /* Dot symbol */
+      color: gray; /* Blue color */
+      font-size: 20px; /* Adjust size of the diamond */
+      position: absolute;
+      left: -20px; /* Adjust position of the diamond */
+      top: 0;
+    }
     </style>
     <script>
       function toggleMenu() {
@@ -270,21 +288,21 @@
             </div>
             <div class="strip-text flex items-center justify-center">
               <i class="fas fa-check text-green-500 mr-2"></i>
-              <span>A game-changer for addressing root causes instead of just masking
-                symptoms</span>
+              <span
+                >A game-changer for addressing root causes instead of just
+                masking symptoms</span
+              >
             </div>
             <div class="strip-text flex items-center justify-center">
               <i class="fas fa-check text-green-500 mr-2"></i>
-              <span>No injections, pills/tablets, capsules, syrups, therapies, lab
-                tests, MRIs, and ultrasound</span>
+              <span class="whitespace-nowrap"
+                >No injections, pills/tablets, capsules, syrups, therapies, lab
+                tests, MRIs, and ultrasound</span
+              >
             </div>
             <div class="strip-text flex items-center justify-center">
               <i class="fas fa-check text-green-500 mr-2"></i>
               <span>No bugs and hanging of complex Apps (Android & iOS).</span>
-            </div>
-            <div class="strip-text flex items-center justify-center">
-              <i class="fas fa-check text-green-500 mr-2"></i>
-              <span>No selection of playlists required.</span>
             </div>
           </div>
         </div>
@@ -309,9 +327,7 @@
             >No injections, pills/tablets, capsules, syrups, therapies, lab
             tests, MRIs, and ultrasound</span
           > -->
-          <span class="slogan bg-gray-500 p-2"
-            >No scans needed</span
-          >
+          <span class="slogan bg-gray-500 p-2">No scans needed</span>
           <span class="slogan bg-gray-500 p-2"
             >No "listening" of frequency (s) by headphones etc.</span
           >
@@ -357,19 +373,17 @@
               About Resonance Healing
             </h2>
             <p class="text-lg text-gray-600">
-              Are you someone who is always feeling sick, but are never able to
-              find out why? Some people may spend hundreds of hours at the
-              doctor’s office, but the best ultrasounds and blood tests cannot
-              determine the root cause of their symptoms or recommend the right
-              kind of treatments.
+              Resonance Healing offers a holistic approach to address a wide
+              range of physiological and psychological conditions. By targeting
+              imbalances on both the mental and physical levels, this healing
+              modality aims to restore harmony and well-being. Healing aims to
+              restore balance, supporting physical, mental, and emotional
+              well-being.
             </p>
             <p class="text-lg text-gray-600">
-              Resonance Healing may be the answer. Resonance Healing is a
-              healing method that aims to discover imbalances in the body’s
-              electromagnetic field, and then improve that ailment with the use
-              of energy waves. This form of energy medicine has been used to
-              address a number of conditions, such as chronic fatigue, anxiety,
-              irritable bowel syndrome, cancer, and Lyme disease.
+              Resonance Healing is a healing method that aims to discover
+              imbalances in the body’s electromagnetic field, and then improve
+              that ailment with the use of energy waves.
             </p>
             <!-- <button
               class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-medium hover:opacity-90 transition-opacity duration-200"
@@ -387,17 +401,48 @@
     >
       <div class="absolute inset-0 bg-black opacity-20"></div>
 
-      <div class="relative ml-[10%] z-20 text-center text-white px-4 w-[50%]">
-        <h2 class="text-4xl md:text-5xl font-bold mb-8">
-          An Intuitive Approach
-        </h2>
-        <p class="text-2xl">
-          Resonance Healing offers a holistic approach to address a wide range
-          of physiological and psychological conditions. By targeting imbalances
-          on both the mental and physical levels, this healing modality aims to
-          restore harmony and well-being. Healing aims to restore balance,
-          supporting physical, mental, and emotional well-being.
+      <div class="relative ml-[10%] z-20 text-start text-gray-600 px-4 w-[50%]">
+        <p class="text-3xl">
+          The Resonance Healing App is a perfect choice for those who want to
+          ingest remedies and affirmations in daily rituals, as integrative
+          medicine (holistically); what shapes your trajectory in life.
         </p>
+        <p class="mt-8 text-3xl text-start text-gray-600">It is also for practitioners of:</p>
+        <div class="flex text-start text-2xl mt-8 text-gray-00 ">
+          <ul class="mr-10" >
+            <li>Homeopathy</li>
+            <li>(Subtle) Energy</li>
+            <li>Quantum & Frequency</li>
+            <li>Spectro-chrome / Colour</li>
+            <li>Aqua (Water) Healing</li>
+            <li>Ayurveda</li>
+            <li>Chakra</li>
+            <li>Reiki</li>
+            <li>Biogemetry</li>
+            <li>Bio-Resonance & Biofield</li>
+          </ul>
+          <ul class="mr-10">
+            <li>Essential Oils & Skin Care</li>
+            <li>PEMF Healing</li>
+            <li>Electro-Herbal</li>
+            <li>e-Medicine</li>
+            <li>Cell / Tissue Salts</li>
+            <li>Detox Energetics</li>
+            <li>Bach flowers (and other flowers)</li>
+            <li>Phyto-biophysics</li>
+            <li>Meridians</li>
+            <li>Radiesthesia</li>
+          </ul>
+          <ul> <li>Radionics & Radionic Rates</li>
+            <li>Pet Behaviours & Animal Vitality</li>
+            <li>Essential Nutrients</li>
+            <li>Relationships & Emotional Therapies</li>
+            <li>Mental Wellness</li>
+            <li>Trauma Recoveries</li>
+            <li>Plant Vitality</li>
+            <li>EMF/5G Protection</l</ul>
+        </div>
+
         <!-- <button
           class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-medium hover:opacity-90 transition-opacity duration-200"
         >
@@ -407,40 +452,26 @@
     </section>
 
     <!-- Services Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-gray-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="grid md:grid-cols-1 gap-12 items-center" >
           <div class="space-y-6">
             <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
-              Our Services
+              App Overview
             </h2>
-            <p class="text-lg text-gray-600">
-              At NOVA, we offer a wide range of services designed to help you
-              achieve your goals. From innovative solutions to unparalleled
-              support, we’ve got you covered.
-            </p>
-            <ul class="space-y-4 text-lg text-gray-600">
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-purple-500 mr-3"></i>
-                Custom Software Development
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-purple-500 mr-3"></i>
-                Cloud Solutions & Integration
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-purple-500 mr-3"></i>
-                Data Analytics & AI Solutions
-              </li>
-            </ul>
+            <p class="text-lg text-gray-800 text-xl">The Resonance Healing.ai App ingests & imprints remedy information directly by a touch on screen and then to any material placed on the "Receive" well. It also broadcasts remedy information for distant / remote healing to anybody (no matter what the distance). It also copies remedies from existing remedies and saves remedy information for recalling at a later date. </p>
+            <p class="text-lg text-gray-800 text-xl">Designed to be user-friendly, simply type in the remedy information, or type the command "COPY", select the potency you may require, set the timer, place your blank tablets, glass of water, or any other material (even gemstones or crystals) in the Receive well, and your remedy will be ready.</p>
+            <p class="text-lg text-gray-800 text-xl">The one word for this App is flexibility, and it opens up a whole new world of therapeutic possibilities. The way the App operates, there is no limit as to what remedy / healing affirmation (the illness description itself) might be. </p>
+            <p class="text-lg text-gray-800 text-xl">Homeopathic remedies and information can be prepared or transmitted (remotely to anyone) with potencies ranging from 1 – 9999 X, C, M, CM, MM, and LM or D. If no potency is required, both potency boxes can be cleared. </p>
+            <p class="text-lg text-gray-800 text-xl">Choose your favorite remedies, information, affirmations, or COPY your Biofield directly into the favorite carrier materials, or broadcast through the "witness" (e.g., a picture of yourself, a hair sample, etc.). </p>
           </div>
-          <div class="w-full">
+          <!-- <div class="w-full h-">
             <img
               src="./pexels-morningtrain-18104.jpg"
               alt="Services Image"
               class="w-full h-auto rounded-lg shadow-lg"
             />
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -828,8 +859,8 @@
         <div class="grid md:grid-cols-2 gap-12 mt-12">
           <div class="space-y-8">
             <!-- <div class="flex items-center space-x-4"> -->
-              <!-- <i class="fas fa-map-marker-alt text-3xl text-purple-300"></i> -->
-              <!-- <div>
+            <!-- <i class="fas fa-map-marker-alt text-3xl text-purple-300"></i> -->
+            <!-- <div>
                 <h3 class="text-2xl font-semibold">Our Office</h3>
                 <p>123 Innovation Blvd, Tech City, TC 12345</p>
               </div> -->
@@ -853,7 +884,10 @@
             <div class="flex items-center space-x-4">
               <!-- <i class="fas fa-envelope text-3xl text-purple-300"></i> -->
               <div class="flex gap-4">
-                <a href="#" class="text-gray-400 hover:text-white text-purple-300">
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white text-purple-300"
+                >
                   <i class="fab fa-facebook-f text-3xl text-purple-300"></i>
                 </a>
                 <p class="text-2xl font-semibold">Facebook</p>
@@ -862,7 +896,10 @@
             <div class="flex items-center space-x-4">
               <!-- <i class="fas fa-envelope text-3xl text-purple-300"></i> -->
               <div class="flex gap-4">
-                <a href="#" class="text-gray-400 hover:text-white text-purple-300">
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white text-purple-300"
+                >
                   <i class="fab fa-twitter text-3xl text-purple-300"></i>
                 </a>
                 <p class="text-2xl font-semibold">Twitter</p>
@@ -871,7 +908,10 @@
             <div class="flex items-center space-x-4">
               <!-- <i class="fas fa-envelope text-3xl text-purple-300"></i> -->
               <div class="flex gap-4">
-                <a href="#" class="text-gray-400 hover:text-white text-purple-300">
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white text-purple-300"
+                >
                   <i class="fab fa-linkedin-in text-3xl text-purple-300"></i>
                 </a>
                 <p class="text-2xl font-semibold">LinkedIn</p>
