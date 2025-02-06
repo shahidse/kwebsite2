@@ -26,7 +26,7 @@
     </script>
   </head>
   <body class="bg-gray-50">
-    <nav class="bg-light fixed w-full z-50">
+    <nav class="bg-light relative fixed w-full z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-24">
           <!-- Logo -->
@@ -34,8 +34,7 @@
             <img
               src="./Resonance-logo.svg"
               alt="NOVA Logo"
-              class="mr-2"
-              style="height: 150px; width: 150px"
+              class="h-[100px] w-[100px] md:h-[130px] md:w-[130px]"
             />
           </div>
 
@@ -63,7 +62,7 @@
             >
             <a
               class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity duration-200 flex items-center text-[22px]"
-              href="#contact"
+              href="./index.html#contact"
             >
               Contact Us
               <i class="fas fa-arrow-right ml-2"></i>
@@ -90,7 +89,7 @@
               >Home</a
             >
             <a
-              href="./resources.html"
+              href="./download.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
               >Get App</a
             >
@@ -106,7 +105,7 @@
             >
             <a
               class="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity duration-200 flex items-center justify-center text-gray-700 text-[22px]"
-              href="#contact"
+              href="./index.html#contact"
             >
               Contact Us
               <i class="fas fa-arrow-right ml-2"></i>
@@ -117,10 +116,12 @@
     </nav>
 
     <!-- Section for Website Links -->
-    <section class="h-screen flex items-center justify-center bg-gray-500">
+    <section class="py-4 flex items-center justify-center bg-gray-500">
       <div class="container mx-auto px-4">
         <!-- Cards Container -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8"
+        >
           <!-- Card 1 -->
           <div
             class="bg-gray-600 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
@@ -239,7 +240,7 @@
     </section>
 
     <!-- Section for Features -->
-    <section class="h-screen bg-gray-400 py-16">
+    <section class="py-4 bg-gray-400 py-16">
       <div class="container mx-auto px-4">
         <!-- Cards Container -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
