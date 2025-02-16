@@ -13,199 +13,58 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@700&family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./Resonance-logo.svg" type="image/x-icon">
-    <style>
-      .slogan-section {
-        background-color: #e0e0e0;
-      }
-      /* Individual slogan setup */
-      .slogan {
-        /* display: inline-block; */
-        border-radius: 4px;
-        box-shadow: 0px 10px 15px rgba(65, 64, 64, 0.4),
-          /* First shadow with bottom offset */ 0px 20px 25px
-            rgba(65, 65, 65, 0.4),
-          /* Second shadow with stronger offset */ 0px 30px 35px
-            rgba(60, 60, 60, 0.2);
-      }
-
-      /* Optional for responsiveness and adjusting padding */
-      .slogan {
-        margin: 10px;
-      }
-      .strip-text2 {
-        white-space: nowrap;
-        animation: scrollText 30s linear infinite;
-      }
-
-      @keyframes scrollText {
-        0% {
-          transform: translateX(100%);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
-      .image-hover-effect {
-        background-image: url("./pexels-scottwebb-403571.jpg");
-        background-size: cover;
-        background-position: center;
-        transition: background-position 0.5s ease;
-      }
-
-      .image-hover-effect:hover {
-        background-position: 20% center;
-      }
-      nav {
-        background-color: #eff3ea;
-      }
-      .strip-text-wrapper {
-        position: relative;
-        height: 50px; /* Limit height to show only one sentence at a time */
-        overflow: hidden;
-      }
-      .strip-text-container {
-        animation: fadeTextGroup 35s linear infinite; /* Loop the entire sequence */
-      }
-      .strip-text {
-        position: absolute;
-        width: 100%;
-        opacity: 0;
-        animation: fadeText 10s linear forwards;
-      }
-
-      .strip-text:nth-child(1) {
-        animation-delay: 0s;
-      }
-
-      .strip-text:nth-child(2) {
-        animation-delay: 10s;
-      }
-
-      .strip-text:nth-child(3) {
-        animation-delay: 20s;
-      }
-
-      .strip-text:nth-child(4) {
-        animation-delay: 30s;
-      }
-
-      .strip-text:nth-child(5) {
-        animation-delay: 40s;
-      }
-
-      .strip-text:nth-child(6) {
-        animation-delay: 50s;
-      }
-
-      @keyframes fadeText {
-        0% {
-          opacity: 0; /* Initially invisible */
-        }
-        10% {
-          opacity: 0.5; /* Fade in */
-        }
-        30% {
-          opacity: 1; /* Stay visible */
-        }
-        40% {
-          opacity: 0.5; /* Fade out */
-        }
-        100% {
-          opacity: 0; /* Still invisible */
-        }
-      }
-      /* Keyframes for repeating the entire group of sentences */
-      @keyframes fadeTextGroup {
-        0% {
-          /* Start the group from the beginning */
-          opacity: 1;
-        }
-        16% {
-          opacity: 1; /* First sentence is visible */
-        }
-        33% {
-          opacity: 1; /* Two sentences are visible */
-        }
-        50% {
-          opacity: 1; /* All sentences are visible */
-        }
-        100% {
-          opacity: 0; /* End the group fade-out after all sentences */
-        }
-      }
-      ul {
-      list-style-type: none; /* Remove default bullet points */
-      padding-left: 0;
-    }
-    
-    ul li {
-      margin-bottom: 10px; /* Adds a gap between list items */
-      position: relative;
-    }
-    
-    ul li::before {
-      content: '•'; /* Dot symbol */
-      color: gray; /* Blue color */
-      font-size: 20px; /* Adjust size of the diamond */
-      position: absolute;
-      left: -20px; /* Adjust position of the diamond */
-      top: 0;
-    }
-    </style>
-    <script>
-      function toggleMenu() {
-        const mobileMenu = document.getElementById("mobile-menu");
-        mobileMenu.classList.toggle("hidden");
-      }
-    </script>
+    <link rel="shortcut icon" href="./Resonance-logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js"></script>
+    <script src="./index.translation.js"></script>
+    <script src="./index.language.js"></script>
   </head>
   <body class="bg-gray-50">
     <!-- Navigation Bar -->
     <nav class="bg-light relative fixed w-full z-10">
-      <div class="max-w-7xl mx-auto px-4  lg:px-4">
+      <div class="max-w-7xl mx-auto px-4 lg:px-4">
         <div class="flex items-center justify-between h-24">
-          <!-- Logo -->
           <div class="flex items-center">
             <img
               src="./Resonance-logo.svg"
               alt="NOVA Logo"
-              class=" h-[100px] w-[100px] md:h-[130px] md:w-[130px]"
+              class="h-[100px] w-[100px] md:h-[130px] md:w-[130px]"
             />
           </div>
-
-          <!-- Desktop Navigation -->
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="./index.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="home"
               >Home</a
             >
             <a
               href="./download.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="getApp"
               >Get App</a
             >
             <a
               href="./resources.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="resources"
               >Resources</a
             >
             <a
               href="./about.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="about"
               >About</a
             >
             <a
               class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity duration-200 flex items-center text-[22px]"
               href="./index.html#contact"
+              data-lang="contactUs"
             >
-              Contact Us
+              <span>Contact Us</span>
               <i class="fas fa-arrow-right ml-2"></i>
             </a>
           </div>
-
-          <!-- Mobile Menu Button -->
           <div class="md:hidden">
             <button
               onclick="toggleMenu()"
@@ -215,35 +74,38 @@
             </button>
           </div>
         </div>
-
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
           <div class="px-2 pt-2 pb-3 space-y-1">
             <a
               href="./index.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="home"
               >Home</a
             >
             <a
               href="./download.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="getApp"
               >Get App</a
             >
             <a
               href="./resources.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="resources"
               >Resources</a
             >
             <a
               href="./about.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="about"
               >About</a
             >
             <a
               class="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity duration-200 flex items-center justify-center text-gray-700 text-[22px]"
               href="./index.html#contact"
+              data-lang="contactUs"
             >
-              Contact Us
+              <span>Contact Us</span>
               <i class="fas fa-arrow-right ml-2"></i>
             </a>
           </div>
@@ -251,54 +113,77 @@
       </div>
     </nav>
 
-    <section class="relative h-[65vh] md:h-[75vh] flex items-center justify-center overflow-hidden">
+    <section
+      class="relative h-[65vh] md:h-[75vh] flex items-center justify-center overflow-hidden"
+    >
       <!-- Background Video -->
-      <video autoplay muted loop class="absolute w-full h-full object-cover z-0">
+      <video
+        autoplay
+        muted
+        loop
+        class="absolute w-full h-full object-cover z-0"
+      >
         <source src="./3770017-hd_1920_1080_25fps.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-    
+
       <!-- Lighter Overlay -->
       <div class="absolute w-full h-full bg-black opacity-30 z-10"></div>
-    
+
       <!-- Content -->
       <div class="z-20 text-center text-white px-4">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
+          data-lang="welcome"
+        >
           Welcome to Resonance Healing
         </h1>
-    
+
         <!-- New List with Checkmarks as Strip Text -->
-        <div class="strip-text-wrapper text-white mt-4 text-sm sm:text-xl text-center">
+        <div
+          class="strip-text-wrapper text-white mt-4 text-sm sm:text-xl text-center"
+        >
           <div class="strip-text-container text-xl sm:text-2xl">
             <div class="strip-text flex items-center justify-center mb-2">
               <i class="fas fa-check text-green-500 mr-2"></i>
-              <span>Energy informs matter</span>
+              <span data-lang="energyInforms">Energy informs matter</span>
             </div>
             <div class="strip-text flex items-center justify-center mb-2">
               <i class="fas fa-check text-green-500 mr-2"></i>
-              <span>Resonance Healing is the Future of Health.</span>
+              <span data-lang="futureHealth"
+                >Resonance Healing is the Future of Health.</span
+              >
             </div>
             <div class="strip-text flex items-center justify-center mb-2">
               <i class="fas fa-check text-green-500 mr-2"></i>
-              <span>A game-changer for addressing root causes instead of just masking symptoms</span>
+              <span data-lang="gameChanger"
+                >A game-changer for addressing root causes instead of just
+                masking symptoms</span
+              >
             </div>
             <div class="strip-text flex items-center justify-center mb-2">
               <i class="fas fa-check text-green-500 mr-2"></i>
-              <span class="whitespace-nowrap">No injections, pills/tablets, capsules, syrups, therapies, lab tests, MRIs, and ultrasound</span>
+              <span data-lang="noMeds"
+                >No injections, pills/tablets, capsules, syrups, therapies, lab
+                tests, MRIs, and ultrasound</span
+              >
             </div>
             <div class="strip-text flex items-center justify-center">
               <i class="fas fa-check text-green-500 mr-2"></i>
-              <span>No bugs and hanging of complex Apps (Android & iOS).</span>
+              <span data-lang="noBugs"
+                >No bugs and hanging of complex Apps (Android & iOS).</span
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
-    
 
     <section class="slogan-section py-8 md:py-12 overflow-hidden">
       <div class="relative">
-        <div class="strip-text2 text-xl md:text-2xl font-semibold :font-bold text-white">
+        <div
+          class="strip-text2 text-xl md:text-2xl font-semibold :font-bold text-white"
+        >
           <!-- <span class="slogan bg-gray-500 p-2">Energy informs matter</span>
           <span class="slogan bg-gray-500 p-2"
             >Resonance Healing is the Future of Health.</span
@@ -314,20 +199,22 @@
             >No injections, pills/tablets, capsules, syrups, therapies, lab
             tests, MRIs, and ultrasound</span
           > -->
-          <span class="slogan bg-gray-500 p-2">No scans needed</span>
-          <span class="slogan bg-gray-500 p-2"
-            >No "listening" of frequency (s) by headphones etc.</span
+          <span class="slogan bg-gray-500 p-2" data-lang="noScans"
+            >No scans needed</span
           >
-          <span class="slogan bg-gray-500 p-2"
-            >No "botheration" of interpretation of scans.</span
+          <span class="slogan bg-gray-500 p-2" data-lang="noListening"
+            >No 'listening' of frequency (s) by headphones etc.</span
           >
-          <span class="slogan bg-gray-500 p-2"
+          <span class="slogan bg-gray-500 p-2" data-lang="noInterpretation"
+            >No 'botheration' of interpretation of scans.</span
+          >
+          <span class="slogan bg-gray-500 p-2" data-lang="noSubscriptions"
             >No high subscriptions for the Apps.</span
           >
-          <span class="slogan bg-gray-500 p-2"
+          <span class="slogan bg-gray-500 p-2" data-lang="noBugs"
             >No bugs and hanging of complex Apps (Android & iOS).</span
           >
-          <span class="slogan bg-gray-500 p-2"
+          <span class="slogan bg-gray-500 p-2" data-lang="noPlaylistSelection"
             >No selection of playlists required.</span
           >
         </div>
@@ -353,13 +240,16 @@
               Your browser does not support the video tag.
             </video>
           </div>
-    
+
           <!-- Text Section -->
           <div class="space-y-6">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+            <h2
+              class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900"
+              data-lang="aboutResonance"
+            >
               About Resonance Healing
             </h2>
-            <p class="text-lg text-gray-600">
+            <p class="text-lg text-gray-600" data-lang="healingApproach">
               Resonance Healing offers a holistic approach to address a wide
               range of physiological and psychological conditions. By targeting
               imbalances on both the mental and physical levels, this healing
@@ -367,7 +257,7 @@
               restore balance, supporting physical, mental, and emotional
               well-being.
             </p>
-            <p class="text-lg text-gray-600">
+            <p class="text-lg text-gray-600" data-lang="healingMethod">
               Resonance Healing is a healing method that aims to discover
               imbalances in the body’s electromagnetic field, and then improve
               that ailment with the use of energy waves.
@@ -382,85 +272,122 @@
         </div>
       </div>
     </section>
-    
 
     <!-- New Section with Background Image and Hover Effect -->
     <section
-      class="relative  flex items-center justify-start overflow-hidden image-hover-effect p-2 md:p-8"
+      class="relative flex items-center justify-start overflow-hidden image-hover-effect p-2 md:p-8"
     >
       <div class="absolute inset-0 bg-black opacity-20"></div>
 
-      <div class=" ml-[5%] md:ml-[10%] z-20 text-start text-gray-600   md:px-4 w-[100%] md:w-[50%]">
-        <p class="text-xl md:text-3xl">
+      <div
+        class="ml-[5%] md:ml-[10%] z-20 text-start text-gray-600 md:px-4 w-[100%] md:w-[50%]"
+      >
+        <p class="text-xl md:text-3xl" data-lang="resonanceApp">
           The Resonance Healing App is a perfect choice for those who want to
           ingest remedies and affirmations in daily rituals, as integrative
           medicine (holistically); what shapes your trajectory in life.
         </p>
-        <p class="mt-4 md:mt-8 text-xl md:text-3xl text-start text-gray-600">It is also for practitioners of:</p>
-        <div class="flex md:flex-row flex-col px-6 md:px-2 text-start text-normal md:text-2xl mt-8 text-gray-00 h-[50vh] overflow-auto md:h-auto">
-          <ul class="inline-block  md:mr-10" >
-            <li>Homeopathy</li>
-            <li>(Subtle) Energy</li>
-            <li>Quantum & Frequency</li>
-            <li>Spectro-chrome / Colour</li>
-            <li>Aqua (Water) Healing</li>
-            <li>Ayurveda</li>
-            <li>Chakra</li>
-            <li>Reiki</li>
-            <li>Biogemetry</li>
-            <li>Bio-Resonance & Biofield</li>
+        <p
+          class="mt-4 md:mt-8 text-xl md:text-3xl text-start text-gray-600"
+          data-lang="forPractitioners"
+        >
+          It is also for practitioners of:
+        </p>
+
+        <div
+          class="flex md:flex-row flex-col px-6 md:px-2 text-start text-normal md:text-2xl mt-8 text-gray-00 h-[50vh] overflow-auto md:h-auto"
+        >
+          <ul class="inline-block md:mr-10">
+            <li data-lang="homeopathy">Homeopathy</li>
+            <li data-lang="subtleEnergy">(Subtle) Energy</li>
+            <li data-lang="quantumFrequency">Quantum & Frequency</li>
+            <li data-lang="spectroChrome">Spectro-chrome / Colour</li>
+            <li data-lang="aquaHealing">Aqua (Water) Healing</li>
+            <li data-lang="ayurveda">Ayurveda</li>
+            <li data-lang="chakra">Chakra</li>
+            <li data-lang="reiki">Reiki</li>
+            <li data-lang="biogeometry">Biogeometry</li>
+            <li data-lang="bioResonance">Bio-Resonance & Biofield</li>
           </ul>
           <ul class="inline-block mr-4 md:mr-10">
-            <li>Essential Oils & Skin Care</li>
-            <li>PEMF Healing</li>
-            <li>Electro-Herbal</li>
-            <li>e-Medicine</li>
-            <li>Cell / Tissue Salts</li>
-            <li>Detox Energetics</li>
-            <li>Bach flowers (and other flowers)</li>
-            <li>Phyto-biophysics</li>
-            <li>Meridians</li>
-            <li>Radiesthesia</li>
+            <li data-lang="essentialOils">Essential Oils & Skin Care</li>
+            <li data-lang="pemfHealing">PEMF Healing</li>
+            <li data-lang="electroHerbal">Electro-Herbal</li>
+            <li data-lang="eMedicine">e-Medicine</li>
+            <li data-lang="cellSalts">Cell / Tissue Salts</li>
+            <li data-lang="detoxEnergetics">Detox Energetics</li>
+            <li data-lang="bachFlowers">Bach flowers (and other flowers)</li>
+            <li data-lang="phytoBiophysics">Phyto-biophysics</li>
+            <li data-lang="meridians">Meridians</li>
+            <li data-lang="radiesthesia">Radiesthesia</li>
           </ul>
-          <ul class="inline-block"> <li>Radionics & Radionic Rates</li>
-            <li>Pet Behaviours & Animal Vitality</li>
-            <li>Essential Nutrients</li>
-            <li>Relationships & Emotional Therapies</li>
-            <li>Mental Wellness</li>
-            <li>Trauma Recoveries</li>
-            <li>Plant Vitality</li>
-            <li>EMF/5G Protection</l</ul>
+          <ul class="inline-block">
+            <li data-lang="radionics">Radionics & Radionic Rates</li>
+            <li data-lang="petVitality">Pet Behaviours & Animal Vitality</li>
+            <li data-lang="essentialNutrients">Essential Nutrients</li>
+            <li data-lang="relationshipsTherapies">
+              Relationships & Emotional Therapies
+            </li>
+            <li data-lang="mentalWellness">Mental Wellness</li>
+            <li data-lang="traumaRecovery">Trauma Recoveries</li>
+            <li data-lang="plantVitality">Plant Vitality</li>
+            <li data-lang="emfProtection">EMF/5G Protection</li>
+          </ul>
         </div>
-
-        <!-- <button
-          class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-medium hover:opacity-90 transition-opacity duration-200"
-        >
-          Join Me
-        </button> -->
       </div>
     </section>
 
     <!-- Services Section -->
     <section class="py-20 bg-gray-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-1 gap-12 items-center" >
+        <div class="grid md:grid-cols-1 gap-12 items-center">
           <div class="space-y-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+            <h2
+              class="text-4xl md:text-5xl font-bold text-gray-900"
+              data-lang="appOverview"
+            >
               App Overview
             </h2>
-            <p class="text-lg text-gray-800 text-xl">The Resonance Healing.ai App ingests & imprints remedy information directly by a touch on screen and then to any material placed on the "Receive" well. It also broadcasts remedy information for distant / remote healing to anybody (no matter what the distance). It also copies remedies from existing remedies and saves remedy information for recalling at a later date. </p>
-            <p class="text-lg text-gray-800 text-xl">Designed to be user-friendly, simply type in the remedy information, or type the command "COPY", select the potency you may require, set the timer, place your blank tablets, glass of water, or any other material (even gemstones or crystals) in the Receive well, and your remedy will be ready.</p>
-            <p class="text-lg text-gray-800 text-xl">The one word for this App is flexibility, and it opens up a whole new world of therapeutic possibilities. The way the App operates, there is no limit as to what remedy / healing affirmation (the illness description itself) might be. </p>
-            <p class="text-lg text-gray-800 text-xl">Homeopathic remedies and information can be prepared or transmitted (remotely to anyone) with potencies ranging from 1 – 9999 X, C, M, CM, MM, and LM or D. If no potency is required, both potency boxes can be cleared. </p>
-            <p class="text-lg text-gray-800 text-xl">Choose your favorite remedies, information, affirmations, or COPY your Biofield directly into the favorite carrier materials, or broadcast through the "witness" (e.g., a picture of yourself, a hair sample, etc.). </p>
+            <p class="text-lg text-gray-800 text-xl" data-lang="appDescription">
+              The Resonance Healing.ai App ingests & imprints remedy information
+              directly by a touch on screen and then to any material placed on
+              the "Receive" well. It also broadcasts remedy information for
+              distant / remote healing to anybody (no matter what the distance).
+              It also copies remedies from existing remedies and saves remedy
+              information for recalling at a later date.
+            </p>
+            <p
+              class="text-lg text-gray-800 text-xl"
+              data-lang="appUserFriendly"
+            >
+              Designed to be user-friendly, simply type in the remedy
+              information, or type the command "COPY", select the potency you
+              may require, set the timer, place your blank tablets, glass of
+              water, or any other material (even gemstones or crystals) in the
+              Receive well, and your remedy will be ready.
+            </p>
+            <p class="text-lg text-gray-800 text-xl" data-lang="appFlexibility">
+              The one word for this App is flexibility, and it opens up a whole
+              new world of therapeutic possibilities. The way the App operates,
+              there is no limit as to what remedy / healing affirmation (the
+              illness description itself) might be.
+            </p>
+            <p
+              class="text-lg text-gray-800 text-xl"
+              data-lang="appPotencyRange"
+            >
+              Homeopathic remedies and information can be prepared or
+              transmitted (remotely to anyone) with potencies ranging from 1 –
+              9999 X, C, M, CM, MM, and LM or D. If no potency is required, both
+              potency boxes can be cleared.
+            </p>
+            <p class="text-lg text-gray-800 text-xl" data-lang="appUsage">
+              Choose your favorite remedies, information, affirmations, or COPY
+              your Biofield directly into the favorite carrier materials, or
+              broadcast through the "witness" (e.g., a picture of yourself, a
+              hair sample, etc.).
+            </p>
           </div>
-          <!-- <div class="w-full h-">
-            <img
-              src="./pexels-morningtrain-18104.jpg"
-              alt="Services Image"
-              class="w-full h-auto rounded-lg shadow-lg"
-            />
-          </div> -->
         </div>
       </div>
     </section>
@@ -833,19 +760,21 @@
     </script> -->
     <!-- Contact Us Section -->
     <section
-      class="py-8 bg-gradient-to-r from-gray-400 to-gray-600 text-white"
+      class="py-12 bg-gradient-to-r from-gray-500 to-gray-700 text-white"
       id="contact"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center space-y-8">
-          <h2 class="text-4xl md:text-5xl font-bold">Contact Us</h2>
-          <p class="text-lg md:text-xl">
-            We’d love to hear from you! Whether you have questions, feedback, or
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="text-center space-y-6">
+          <h2 class="text-4xl md:text-5xl font-bold" data-lang="contactUs">
+            Contact Us
+          </h2>
+          <p class="text-lg md:text-xl" data-lang="contactDesc">
+            We'd love to hear from you! Whether you have questions, feedback, or
             need support, we're here to help.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 grid-cols-1 mt-6 md:mt-12">
+        <div class="grid md:grid-cols-2 gap-8 mt-10">
           <div class="space-y-8">
             <!-- <div class="flex items-center space-x-4"> -->
             <!-- <i class="fas fa-map-marker-alt text-3xl text-purple-300"></i> -->
@@ -858,19 +787,23 @@
             <div class="flex md:items-center justify-center gap-4">
               <i class="fas fa-phone-alt text-3xl text-purple-300"></i>
               <div>
-                <h3 class="text-2xl font-semibold">Call Us</h3>
-                <p>+1 (123) 456-7890</p>
+                <h3 class="text-2xl font-semibold" data-lang="callUs">
+                  Call Us
+                </h3>
+                <p data-lang="phoneNumber">+1 (123) 456-7890</p>
               </div>
             </div>
 
             <div class="flex md:items-center justify-center gap-4">
               <i class="fas fa-envelope text-3xl text-purple-300"></i>
               <div>
-                <h3 class="text-2xl font-semibold">Email Us</h3>
-                <p>support@nova.com</p>
+                <h3 class="text-2xl font-semibold" data-lang="emailUs">
+                  Email Us
+                </h3>
+                <p data-lang="emailAddress">support@nova.com</p>
               </div>
             </div>
-            <div class="flex md:items-center justify-center ">
+            <div class="flex md:items-center justify-center">
               <!-- <i class="fas fa-envelope text-3xl text-purple-300"></i> -->
               <div class="flex gap-4">
                 <a
@@ -882,7 +815,7 @@
                 <p class="text-2xl font-semibold">Facebook</p>
               </div>
             </div>
-            <div class="flex md:items-center justify-center ">
+            <div class="flex md:items-center justify-center">
               <!-- <i class="fas fa-envelope text-3xl text-purple-300"></i> -->
               <div class="flex gap-4">
                 <a
@@ -894,7 +827,7 @@
                 <p class="text-2xl font-semibold">Twitter</p>
               </div>
             </div>
-            <div class="flex md:items-center justify-center ">
+            <div class="flex md:items-center justify-center">
               <!-- <i class="fas fa-envelope text-3xl text-purple-300"></i> -->
               <div class="flex gap-4">
                 <a
@@ -916,22 +849,26 @@
             </div> -->
           </div>
 
-          <div class="bg-white p-4 mt-4 md:mt-0 rounded-lg shadow-lg">
-            <h3 class="text-3xl font-semibold text-gray-900 mb-3">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3
+              class="text-3xl font-semibold text-gray-900 mb-4"
+              data-lang="sendMessage"
+            >
               Send Us a Message
             </h3>
-            <form action="#" method="POST" class="space-y-6">
+            <form action="#" method="POST" class="space-y-5">
               <div>
                 <label
                   for="name"
                   class="block text-lg font-medium text-gray-700"
+                  data-lang="yourName"
                   >Your Name</label
                 >
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  class="w-full mt-2 px-4 py-2 border rounded-md focus:ring-2 focus:ring-purple-500"
                   required
                 />
               </div>
@@ -940,13 +877,14 @@
                 <label
                   for="email"
                   class="block text-lg font-medium text-gray-700"
+                  data-lang="yourEmail"
                   >Your Email</label
                 >
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  class="w-full mt-2 px-4 py-2 border rounded-md focus:ring-2 focus:ring-purple-500"
                   required
                 />
               </div>
@@ -955,13 +893,14 @@
                 <label
                   for="message"
                   class="block text-lg font-medium text-gray-700"
+                  data-lang="yourMessage"
                   >Your Message</label
                 >
                 <textarea
                   id="message"
                   name="message"
                   rows="4"
-                  class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  class="w-full mt-2 px-4 py-2 border rounded-md focus:ring-2 focus:ring-purple-500"
                   required
                 ></textarea>
               </div>
@@ -969,7 +908,8 @@
               <div>
                 <button
                   type="submit"
-                  class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity duration-200"
+                  class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition"
+                  data-lang="sendButton"
                 >
                   Send Message
                 </button>
@@ -979,6 +919,7 @@
         </div>
       </div>
     </section>
+
     <!-- Visit My Resources Section -->
     <section class="py-20" style="background-color: #e0e0e0">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -987,6 +928,7 @@
           <a
             href="./devices.html"
             class="inline-block bg-gradient-to-r from-yellow-400 to-red-500 text-white text-4xl font-bold py-4 px-8 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300"
+            data-lang="instructionButton"
           >
             Click for App Instructions
           </a>
@@ -997,13 +939,95 @@
       </div>
     </section>
 
+    <!-- language section -->
+    <section>
+      <div class="fixed bottom-4 left-4 z-50">
+        <div class="relative inline-block">
+          <button id="language-toggle" class="language-button">
+            <img
+              src="https://flagcdn.com/us.svg"
+              alt="English"
+              class="w-6 h-6 rounded-full"
+              id="selected-flag"
+            />
+          </button>
+          <div id="language-dropdown" class="language-dropdown hidden">
+            <ul >
+              <li class="flex gap-2">
+                <img
+                  src="https://flagcdn.com/us.svg"
+                  alt="English"
+                  class="w-6 h-6 rounded-full"
+                />
+                <a
+                  href="#"
+                  data-lang="en"
+                  class="lang-option"
+                  data-flag="https://flagcdn.com/us.svg"
+                  >English</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <img
+                  src="https://flagcdn.com/pk.svg"
+                  alt="English"
+                  class="w-6 h-6 rounded-full"
+                  id="selected-flag"
+                />
+                <a
+                  href="#"
+                  data-lang="ur"
+                  class="lang-option"
+                  data-flag="https://flagcdn.com/pk.svg"
+                  >Urdu</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <img
+                  src="https://flagcdn.com/fr.svg"
+                  alt="English"
+                  class="w-6 h-6 rounded-full"
+                  id="selected-flag"
+                />
+                <a
+                  href="#"
+                  data-lang="fr"
+                  class="lang-option"
+                  data-flag="https://flagcdn.com/fr.svg"
+                  >French</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <img
+                  src="https://flagcdn.com/es.svg"
+                  alt="English"
+                  class="w-6 h-6 rounded-full"
+                  id="selected-flag"
+                />
+                <a
+                  href="#"
+                  data-lang="es"
+                  class="lang-option"
+                  data-flag="https://flagcdn.com/es.svg"
+                  >Spanish</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer Section -->
     <footer class="bg-gray-900 text-white py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
           <!-- Subscribe Form -->
-          <div class="">
-            <h3 class="text-2xl font-bold mb-4 whitespace-nowrap">
+          <div>
+            <h3
+              class="text-2xl font-bold mb-4 whitespace-nowrap"
+              data-lang="subscribe"
+            >
               Subscribe to Our Newsletter
             </h3>
             <form action="#" method="POST" class="flex space-x-4">
@@ -1017,6 +1041,7 @@
               <button
                 type="submit"
                 class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-lg font-semibold hover:opacity-90 transition-opacity duration-200"
+                data-lang="subscribeButton"
               >
                 Subscribe
               </button>
@@ -1025,8 +1050,10 @@
 
           <!-- Disclaimer Section -->
           <div>
-            <h3 class="text-2xl font-bold mb-4">Disclaimer</h3>
-            <p class="text-sm text-gray-400 text-xl">
+            <h3 class="text-2xl font-bold mb-4" data-lang="disclaimerTitle">
+              Disclaimer
+            </h3>
+            <p class="text-sm text-gray-400 text-xl" data-lang="disclaimerText">
               Resonance Healing is not intended to replace professional medical
               advice or approved treatments. It is not intended to diagnose, or
               treat any health condition.
@@ -1035,7 +1062,9 @@
 
           <!-- Social Links -->
           <div>
-            <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+            <h3 class="text-2xl font-bold mb-4" data-lang="followUs">
+              Follow Us
+            </h3>
             <div class="flex space-x-4">
               <a href="#" class="text-gray-400 hover:text-white">
                 <i class="fab fa-facebook-f text-2xl"></i>
@@ -1054,7 +1083,7 @@
 
           <!-- Copyright Section -->
           <div class="md:col-span-2 lg:col-span-1">
-            <p class="text-sm text-gray-400">
+            <p class="text-sm text-gray-400" data-lang="copyright">
               &copy; 2025 Resonance Healing. All rights reserved.
             </p>
           </div>

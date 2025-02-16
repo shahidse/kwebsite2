@@ -1,0 +1,135 @@
+.slogan-section {
+  background-color: #e0e0e0;
+}
+.slogan {
+  border-radius: 4px;
+  box-shadow: 0px 10px 15px rgba(65, 64, 64, 0.4), rgba(65, 65, 65, 0.4),
+    rgba(60, 60, 60, 0.2);
+}
+.slogan {
+  margin: 10px;
+}
+.strip-text2 {
+  white-space: nowrap;
+  animation: scrollText 30s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.image-hover-effect {
+  background-image: url("./pexels-scottwebb-403571.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: background-position 0.5s ease;
+}
+
+.image-hover-effect:hover {
+  background-position: 20% center;
+}
+nav {
+  background-color: #eff3ea;
+}
+.strip-text-wrapper {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+.strip-text-container {
+  animation: fadeTextGroup 35s linear infinite;
+}
+.strip-text {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: fadeText 10s linear forwards;
+}
+
+.strip-text:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.strip-text:nth-child(2) {
+  animation-delay: 10s;
+}
+
+.strip-text:nth-child(3) {
+  animation-delay: 20s;
+}
+
+.strip-text:nth-child(4) {
+  animation-delay: 30s;
+}
+
+.strip-text:nth-child(5) {
+  animation-delay: 40s;
+}
+
+.strip-text:nth-child(6) {
+  animation-delay: 50s;
+}
+
+@keyframes fadeText {
+  0% {
+    opacity: 0; /* Initially invisible */
+  }
+  10% {
+    opacity: 0.5; /* Fade in */
+  }
+  30% {
+    opacity: 1; /* Stay visible */
+  }
+  40% {
+    opacity: 0.5; /* Fade out */
+  }
+  100% {
+    opacity: 0; /* Still invisible */
+  }
+}
+/* Keyframes for repeating the entire group of sentences */
+@keyframes fadeTextGroup {
+  0% {
+    /* Start the group from the beginning */
+    opacity: 1;
+  }
+  16% {
+    opacity: 1; /* First sentence is visible */
+  }
+  33% {
+    opacity: 1; /* Two sentences are visible */
+  }
+  50% {
+    opacity: 1; /* All sentences are visible */
+  }
+  100% {
+    opacity: 0; /* End the group fade-out after all sentences */
+  }
+}
+ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px; /* Adds a gap between list items */
+  position: relative;
+}
+
+ul li::before {
+  content: ""; /* Dot symbol */
+  color: gray; /* Blue color */
+  font-size: 20px; /* Adjust size of the diamond */
+  position: absolute;
+  left: -20px; /* Adjust position of the diamond */
+  top: 0;
+}
+.language-button { background: white; padding: 0.5rem; border-radius: 50%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+.language-dropdown { position: absolute; bottom: 2.5rem; left: 0; background: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; padding: 0.5rem; width: 120px; }
+.language-dropdown ul { list-style: none; padding: 0; margin: 0; }
+.language-dropdown li { padding: 0.5rem; cursor: pointer; }
+.language-dropdown li:hover { background: #f3f3f3; }
