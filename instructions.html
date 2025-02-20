@@ -25,12 +25,15 @@
         mobileMenu.classList.toggle("hidden");
       }
     </script>
+    <link rel="stylesheet" href="./language-selector.css" />
+    <script src="./index.translation.js"></script>
+    <script src="./index.language.js"></script>
   </head>
   <body class="bg-gray-50">
-    <nav class="bg-light relative fixed w-full z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Navigation Bar -->
+    <nav class="bg-light relative fixed w-full z-10">
+      <div class="max-w-7xl mx-auto px-4 lg:px-4">
         <div class="flex items-center justify-between h-24">
-          <!-- Logo -->
           <div class="flex items-center">
             <img
               src="./Resonance-logo.svg"
@@ -38,39 +41,40 @@
               class="h-[100px] w-[100px] md:h-[130px] md:w-[130px]"
             />
           </div>
-
-          <!-- Desktop Navigation -->
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="./index.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="home"
               >Home</a
             >
             <a
               href="./download.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="getApp"
               >Get App</a
             >
             <a
               href="./resources.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="resources"
               >Resources</a
             >
             <a
               href="./about.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="about"
               >About</a
             >
             <a
               class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity duration-200 flex items-center text-[22px]"
               href="./index.html#contact"
+              data-lang="contactUs"
             >
-              Contact Us
+              <span>Contact Us</span>
               <i class="fas fa-arrow-right ml-2"></i>
             </a>
           </div>
-
-          <!-- Mobile Menu Button -->
           <div class="md:hidden">
             <button
               onclick="toggleMenu()"
@@ -80,35 +84,38 @@
             </button>
           </div>
         </div>
-
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
           <div class="px-2 pt-2 pb-3 space-y-1">
             <a
               href="./index.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="home"
               >Home</a
             >
             <a
               href="./download.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="getApp"
               >Get App</a
             >
             <a
               href="./resources.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="resources"
               >Resources</a
             >
             <a
               href="./about.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="about"
               >About</a
             >
             <a
               class="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity duration-200 flex items-center justify-center text-gray-700 text-[22px]"
               href="./index.html#contact"
+              data-lang="contactUs"
             >
-              Contact Us
+              <span>Contact Us</span>
               <i class="fas fa-arrow-right ml-2"></i>
             </a>
           </div>
@@ -117,32 +124,47 @@
     </nav>
 
     <div
-      class=" p-8 md:mx-auto md:my-6 bg-custom-light-blue rounded-2xl  md:p-0 md:container"
+      class="p-8 md:mx-auto md:my-6 bg-custom-light-blue rounded-2xl md:p-0 md:container"
     >
-      <h1 class="text-4xl font-extrabold text-center text-dark-text mb-6">
+      <h1
+        class="text-4xl font-extrabold text-center text-dark-text mb-6"
+        data-lang="instructionsHeading"
+      >
         Instructions
       </h1>
-      <p class="text-lg leading-relaxed text-gray-700 ">
+      <p
+        class="text-lg leading-relaxed text-gray-700"
+        data-lang="resonanceHealingDescription"
+      >
         Resonance Healing.ai enables vibrational remedy information to be
         entered either by typing in the name of the remedy you want or by typing
         in a Radionic Rate. Due to the way the app operates, there is no limit
         as to what a remedy might be. The app serves to synthesise remedy
         vibrations; remedies are not accessed from an internal database.
       </p>
-      <p class="text-lg leading-relaxed text-gray-700 mt-2">
+      <p
+        class="text-lg leading-relaxed text-gray-700 mt-2"
+        data-lang="remedyEntryDescription"
+      >
         Names or rates of remedies required are entered into any one of the
         three drop-down fields labeled "Set Remedy or Type COPY." More than one
         remedy can be entered on each line, provided that remedies are separated
         by either a space or a comma.
       </p>
-      <p class="text-lg leading-relaxed text-gray-700 mt-2">
+      <p
+        class="text-lg leading-relaxed text-gray-700 mt-2"
+        data-lang="remedyRecallDescription"
+      >
         Names or rates relating to information entered and then potentised are
         recorded in the drop-down boxes and may be recalled by clicking on them.
         Information entered can be cleared temporarily by clicking on the reset
         button or cleared permanently from the drop-down lists by clicking on
         the "Clear" button.
       </p>
-      <p class="text-lg leading-relaxed text-gray-700 mt-2">
+      <p
+        class="text-lg leading-relaxed text-gray-700 mt-2"
+        data-lang="notepadFileDescription"
+      >
         When quitting the app, a Notepad file is automatically created in the
         same directory as the app called "Last Remedy." This file records all
         information that was entered or changed: the names of remedies, the
@@ -155,7 +177,10 @@
         <em class="font-bold">File > Open</em> and browse for the saved file
         location.
       </p>
-      <p class="text-lg leading-relaxed text-gray-700 mt-2">
+      <p
+        class="text-lg leading-relaxed text-gray-700 mt-2"
+        data-lang="potencyDescription"
+      >
         The app includes drop-down potency boxes, allowing the creation of
         homoeopathic remedies from 1 - 9999 X, C, M, CM, MM, and LM or D. If no
         potency is required, both potency boxes may be cleared. An additional
@@ -168,97 +193,284 @@
         30 seconds, although adequate potentisation may be achieved with the
         default 3 seconds.
       </p>
-      <p class="text-lg leading-relaxed text-gray-700 mt-2">
+      <p
+        class="text-lg leading-relaxed text-gray-700 mt-2"
+        data-lang="energyProgramsDescription"
+      >
         Two other energy programs are available in the app:
       </p>
-
-      
-      <p class="text-lg leading-relaxed text-gray-700 mt-2 ">
-        <ul style="list-style-type: square" class="pl-4 text-gray-300 mt-2 bg-blue-800 rounded">
-            <li class="">
-              <em class="font-bold">Lock Function:</em> Prevents remedies from losing potency if stored near
-              strong-smelling substances or subjected to physical impact.
-            </li>
-            <li>
-                <em class="font-bold">Program Function: </em>Allows you to define specific qualities for your remedy, such as "this remedy will stay in the body for 10 minutes only" or "this remedy will radiate a distance of 2 feet diameter from the bottle."
-            </li>
-          </ul>
+      <div class="text-lg leading-relaxed text-gray-700 mt-2">
+        <ul class="pl-4 text-gray-300 mt-2 bg-blue-800 rounded list-disc">
+          <li data-lang="lockFunctionDescription">
+            <em class="font-bold">Lock Function:</em> Prevents remedies from
+            losing potency if stored near strong-smelling substances or
+            subjected to physical impact.
+          </li>
+          <li data-lang="programFunctionDescription">
+            <em class="font-bold">Program Function:</em> Allows you to define
+            specific qualities for your remedy, such as "This remedy will stay
+            in the body for 10 minutes only" or "This remedy will radiate a
+            distance of 2 feet from the bottle."
+          </li>
+        </ul>
+      </div>
+      <p
+        class="text-lg leading-relaxed text-gray-700 mt-2"
+        data-lang="buttonOperationDescription"
+      >
+        All buttons in the app are operated by clicking on them, and the
+        "Potentise" button can also be operated by pressing the Enter key.
       </p>
-      <p class="text-lg leading-relaxed text-gray-700 mt-2">
-        All buttons in the app are operated by clicking on them, and the "Potentise" button can also be operated by pressing the Enter key.
+      <p
+        class="text-lg leading-relaxed text-gray-700 mt-2"
+        data-lang="multipleRemedyDescription"
+      >
+        You can also create a multiple remedy with different potencies for each
+        ingredient. To do so, click on
+        <em class="font-bold">Remedy > Programme</em>, where you can type in as
+        many remedy names and potencies as required.
       </p>
-      <p class="text-lg leading-relaxed text-gray-700 mt-2">
-        You can also create a multiple remedy with different potencies for each ingredient. To do so, click on <em class="font-bold">Remedy > Programme</em>Remedy > Programme, where you can type in as many remedy names and potencies as required.
+      <p
+        class="text-lg leading-relaxed text-gray-700 mt-2"
+        data-lang="colorRemedyGeneratorDescription"
+      >
+        The app includes a <em class="font-bold">Color Remedy Generator</em>. To
+        access it, click on <em class="font-bold">Remedy > Color Rem</em>. In
+        the rectangle in the middle of the screen, a color picker allows you to
+        select any of thousands of possible colors. You can assign a
+        homoeopathic potency to your color remedy or leave the potency fields
+        blank if it is intended as an energy remedy. The "Last Remedy" file is
+        updated with this information, or you can save it manually by clicking
+        on <em class="font-bold">File > Save As</em>.
       </p>
-      <p class="text-lg leading-relaxed text-gray-700 mt-2">
-        The app includes a <em class="font-bold">Color Remedy Generator</em>. To access it, click on <em class="font-bold">Remedy > Color Rem</em>. In the rectangle in the middle of the screen, a color picker allows you to select any of thousands of possible colors. You can assign a homoeopathic potency to your color remedy or leave the potency fields blank if it is intended as an energy remedy. The "Last Remedy" file is updated with this information, or you can save it manually by clicking on <em class="font-bold">File > Save As</em>.
-      </p>
-      <p class="text-lg leading-relaxed text-gray-700 mt-2">
-        The app also includes an <em class="font-bold">Energy Memory</em> feature. This can be activated to store remedies created in the app, allowing them to be broadcast continually even after the app is closed. The Energy Memory also has an erase function to clear stored information when needed.
+      <p
+        class="text-lg leading-relaxed text-gray-700 mt-2"
+        data-lang="energyMemoryDescription"
+      >
+        The app also includes an
+        <em class="font-bold">Energy Memory</em> feature. This can be activated
+        to store remedies created in the app, allowing them to be broadcast
+        continually even after the app is closed. The Energy Memory also has an
+        erase function to clear stored information when needed.
       </p>
       <div class="space-y-6">
         <!-- Remedy Vibration Procedure Accordion -->
-        <details class="bg-white shadow-lg rounded-md ">
-          <summary class="cursor-pointer text-2xl font-bold text-dark-text mt-6 p-4 hover:bg-gray-100">
+        <details class="bg-white shadow-lg rounded-md">
+          <summary
+            class="cursor-pointer text-2xl font-bold text-dark-text mt-6 p-4 hover:bg-gray-100"
+            data-lang="remedyVibrationProcedureHeading"
+          >
             Procedure for Making a Remedy Vibration:
           </summary>
-          <ol class="list-decimal text-lg leading-relaxed  rounded pl-10 pt-6">
-            <li>Open the Radionic Potentiser App by clicking on its icon.</li>
-            <li>In the field labeled "Enter Remedy Information or Type COPY," type the name of the remedy vibration you want or its rate (e.g., Homoeopathic Remedy, Flower Remedy, Gemstone Remedy). For multiple remedies, separate names with a space or comma.</li>
-            <li>If a homoeopathic potency is required, select it using the up/down boxes or type in the desired figure. If no potency is required, clear both potency boxes.</li>
-            <li>Adjust the power level if needed (range: 10 - 1600 units). The default is 30 units.</li>
-            <li>Click on the "Potentise" button or press Enter. The word "Energising" will appear on the screen, accompanied by the progression of a status bar. A double beep indicates the end of potentisation.</li>
-            <li>To program the remedy with specific qualities, click on Remedy > Programme, type in your energy program, adjust the potency fields if needed, and click "Potentise."</li>
-            <li>To lock the remedy vibration, click the "Lock" button and then "Potentise."</li>
-            <li>Your remedy is now ready for use.</li>
+          <ol class="list-decimal text-lg leading-relaxed rounded pl-10 pt-6">
+            <li data-lang="step1">
+              Open the Radionic Potentiser App by clicking on its icon.
+            </li>
+            <li data-lang="step2">
+              In the field labeled "Enter Remedy Information or Type COPY," type
+              the name of the remedy vibration you want or its rate (e.g.,
+              Homoeopathic Remedy, Flower Remedy, Gemstone Remedy). For multiple
+              remedies, separate names with a space or comma.
+            </li>
+            <li data-lang="step3">
+              If a homoeopathic potency is required, select it using the up/down
+              boxes or type in the desired figure. If no potency is required,
+              clear both potency boxes.
+            </li>
+            <li data-lang="step4">
+              Adjust the power level if needed (range: 10 - 1600 units). The
+              default is 30 units.
+            </li>
+            <li data-lang="step5">
+              Click on the "Potentise" button or press Enter. The word
+              "Energising" will appear on the screen, accompanied by the
+              progression of a status bar. A double beep indicates the end of
+              potentisation.
+            </li>
+            <li data-lang="step6">
+              To program the remedy with specific qualities, click on Remedy >
+              Programme, type in your energy program, adjust the potency fields
+              if needed, and click "Potentise."
+            </li>
+            <li data-lang="step7">
+              To lock the remedy vibration, click the "Lock" button and then
+              "Potentise."
+            </li>
+            <li data-lang="step8">Your remedy is now ready for use.</li>
           </ol>
-          <p class="text-lg leading-relaxed text-gray-700 mt-2 p-4">To exit the app, click on File > Exit or the close button.</p>
+          <p
+            class="text-lg leading-relaxed text-gray-700 mt-2 p-4"
+            data-lang="exitAppDescription"
+          >
+            To exit the app, click on File > Exit or the close button.
+          </p>
         </details>
-      
+
         <!-- Copy Remedy Procedure Accordion -->
         <details class="bg-white shadow-lg rounded-md">
-          <summary class="cursor-pointer text-2xl font-bold text-dark-text mt-6 p-4 hover:bg-gray-100">
+          <summary
+            class="cursor-pointer text-2xl font-bold text-dark-text mt-6 p-4 hover:bg-gray-100"
+            data-lang="copyRemedyProcedureHeading"
+          >
             Procedure for Copying a Remedy:
           </summary>
-          <ol class="list-decimal pl-10 text-lg leading-relaxed pt-6 rounded ">
-            <li>Place the word “COPY” in the field labeled "Enter Remedy Information or Type COPY."</li>
-            <li>If a homoeopathic potency is required, select it using the up/down boxes or type in the desired figure. If no potency is required, clear both potency boxes.</li>
-            <li>Click the "Potentise" button or press Enter to copy the remedy vibration.</li>
+          <ol class="list-decimal pl-10 text-lg leading-relaxed pt-6 rounded">
+            <li data-lang="copyStep1">
+              Place the word “COPY” in the field labeled "Enter Remedy
+              Information or Type COPY."
+            </li>
+            <li data-lang="copyStep2">
+              If a homoeopathic potency is required, select it using the up/down
+              boxes or type in the desired figure. If no potency is required,
+              clear both potency boxes.
+            </li>
+            <li data-lang="copyStep3">
+              Click the "Potentise" button or press Enter to copy the remedy
+              vibration.
+            </li>
           </ol>
         </details>
-      
+
         <!-- Broadcasting Remedy Procedure Accordion -->
         <details class="bg-white shadow-lg rounded-md">
-          <summary class="cursor-pointer text-2xl font-bold text-dark-text mt-6 p-4 hover:bg-gray-100">
+          <summary
+            class="cursor-pointer text-2xl font-bold text-dark-text mt-6 p-4 hover:bg-gray-100"
+            data-lang="broadcastingRemedyProcedureHeading"
+          >
             Procedure for Broadcasting a Remedy Vibration:
           </summary>
           <ol class="list-decimal pl-10 text-lg leading-relaxed pt-6 rounded">
-            <li>Enter the remedy information and potency as usual.</li>
-            <li>Activate the Energy Memory feature and store the remedy vibration.</li>
-            <li>The remedy is now ready for continuous broadcasting.</li>
+            <li data-lang="broadcastStep1">
+              Enter the remedy information and potency as usual.
+            </li>
+            <li data-lang="broadcastStep2">
+              Activate the Energy Memory feature and store the remedy vibration.
+            </li>
+            <li data-lang="broadcastStep3">
+              The remedy is now ready for continuous broadcasting.
+            </li>
           </ol>
         </details>
-      
+
         <!-- Erasing Remedy Procedure Accordion -->
         <details class="bg-white shadow-lg rounded-md">
-          <summary class="cursor-pointer text-2xl font-bold text-dark-text mt-6 p-4 hover:bg-gray-100">
+          <summary
+            class="cursor-pointer text-2xl font-bold text-dark-text mt-6 p-4 hover:bg-gray-100"
+            data-lang="eraseMemoryProcedureHeading"
+          >
             Procedure for Erasing the Contents of the Energy Memory:
           </summary>
-          <ol class="list-decimal pl-10 text-lg leading-relaxed pt-4 rounded ">
-            <li>Use the Erase Memory function in the app.</li>
-            <li>Confirm the erasure when prompted. The memory will be cleared.</li>
+          <ol class="list-decimal pl-10 text-lg leading-relaxed pt-4 rounded">
+            <li data-lang="eraseStep1">
+              Use the Erase Memory function in the app.
+            </li>
+            <li data-lang="eraseStep2">
+              Confirm the erasure when prompted. The memory will be cleared.
+            </li>
           </ol>
         </details>
       </div>
-      
     </div>
+    <!-- language section -->
+    <section>
+      <div class="fixed bottom-4 left-4 z-50">
+        <div class="relative inline-block">
+          <button id="language-toggle" class="language-button">
+            <img
+              src="https://flagcdn.com/us.svg"
+              alt="English"
+              class="w-6 h-6 rounded-full"
+              id="selected-flag"
+            />
+          </button>
+          <div id="language-dropdown" class="language-dropdown hidden">
+            <ul>
+              <li class="">
+                <a
+                  href="#"
+                  data-lang="en"
+                  class="lang-option flex gap-2"
+                  data-flag="https://flagcdn.com/us.svg"
+                  ><img
+                    src="https://flagcdn.com/us.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />English</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  data-lang="ur"
+                  class="lang-option flex gap-2"
+                  data-flag="https://flagcdn.com/pk.svg"
+                  ><img
+                    src="https://flagcdn.com/pk.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                  />اردو</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  data-lang="fr"
+                  class="lang-option flex gap-2"
+                  data-flag="https://flagcdn.com/fr.svg"
+                  ><img
+                    src="https://flagcdn.com/fr.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />Français</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  data-lang="es"
+                  class="lang-option flex gap-2"
+                  data-flag="https://flagcdn.com/es.svg"
+                  ><img
+                    src="https://flagcdn.com/es.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />
+                  Español</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  data-lang="sa"
+                  class="lang-option flex gap-2"
+                  data-flag="https://flagcdn.com/sa.svg"
+                  ><img
+                    src="https://flagcdn.com/sa.svg"
+                    alt="Arabic"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />
+                  Arabic</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Footer Section -->
     <footer class="bg-gray-900 text-white py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
           <!-- Subscribe Form -->
-          <div class="">
-            <h3 class="text-2xl font-bold mb-4 whitespace-nowrap">
+          <div>
+            <h3
+              class="text-2xl font-bold mb-4 whitespace-nowrap"
+              data-lang="subscribe"
+            >
               Subscribe to Our Newsletter
             </h3>
             <form action="#" method="POST" class="flex space-x-4">
@@ -272,6 +484,7 @@
               <button
                 type="submit"
                 class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-lg font-semibold hover:opacity-90 transition-opacity duration-200"
+                data-lang="subscribeButton"
               >
                 Subscribe
               </button>
@@ -280,8 +493,10 @@
 
           <!-- Disclaimer Section -->
           <div>
-            <h3 class="text-2xl font-bold mb-4">Disclaimer</h3>
-            <p class="text-sm text-gray-400 text-xl">
+            <h3 class="text-2xl font-bold mb-4" data-lang="disclaimerTitle">
+              Disclaimer
+            </h3>
+            <p class="text-sm text-gray-400 text-xl" data-lang="disclaimerText">
               Resonance Healing is not intended to replace professional medical
               advice or approved treatments. It is not intended to diagnose, or
               treat any health condition.
@@ -290,7 +505,9 @@
 
           <!-- Social Links -->
           <div>
-            <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+            <h3 class="text-2xl font-bold mb-4" data-lang="followUs">
+              Follow Us
+            </h3>
             <div class="flex space-x-4">
               <a href="#" class="text-gray-400 hover:text-white">
                 <i class="fab fa-facebook-f text-2xl"></i>
@@ -309,7 +526,7 @@
 
           <!-- Copyright Section -->
           <div class="md:col-span-2 lg:col-span-1">
-            <p class="text-sm text-gray-400">
+            <p class="text-sm text-gray-400" data-lang="copyright">
               &copy; 2025 Resonance Healing. All rights reserved.
             </p>
           </div>

@@ -15,6 +15,7 @@
     />
     <link rel="shortcut icon" href="./Resonance-logo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./language-selector.css" />
     <script src="./index.js"></script>
     <script src="./index.translation.js"></script>
     <script src="./index.language.js"></script>
@@ -952,64 +953,76 @@
             />
           </button>
           <div id="language-dropdown" class="language-dropdown hidden">
-            <ul >
-              <li class="flex gap-2">
-                <img
-                  src="https://flagcdn.com/us.svg"
-                  alt="English"
-                  class="w-6 h-6 rounded-full"
-                />
+            <ul>
+              <li class="">
                 <a
                   href="#"
                   data-lang="en"
-                  class="lang-option"
+                  class="lang-option flex gap-2"
                   data-flag="https://flagcdn.com/us.svg"
-                  >English</a
+                  ><img
+                    src="https://flagcdn.com/us.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />English</a
                 >
               </li>
-              <li class="flex gap-2">
-                <img
-                  src="https://flagcdn.com/pk.svg"
-                  alt="English"
-                  class="w-6 h-6 rounded-full"
-                  id="selected-flag"
-                />
+              <li class="">
                 <a
                   href="#"
                   data-lang="ur"
-                  class="lang-option"
+                  class="lang-option flex gap-2"
                   data-flag="https://flagcdn.com/pk.svg"
-                  >Urdu</a
+                  ><img
+                    src="https://flagcdn.com/pk.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                  />اردو</a
                 >
               </li>
-              <li class="flex gap-2">
-                <img
-                  src="https://flagcdn.com/fr.svg"
-                  alt="English"
-                  class="w-6 h-6 rounded-full"
-                  id="selected-flag"
-                />
+              <li class="">
                 <a
                   href="#"
                   data-lang="fr"
-                  class="lang-option"
+                  class="lang-option flex gap-2"
                   data-flag="https://flagcdn.com/fr.svg"
-                  >French</a
+                  ><img
+                    src="https://flagcdn.com/fr.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />Français</a
                 >
               </li>
-              <li class="flex gap-2">
-                <img
-                  src="https://flagcdn.com/es.svg"
-                  alt="English"
-                  class="w-6 h-6 rounded-full"
-                  id="selected-flag"
-                />
+              <li class="">
                 <a
                   href="#"
                   data-lang="es"
-                  class="lang-option"
+                  class="lang-option flex gap-2"
                   data-flag="https://flagcdn.com/es.svg"
-                  >Spanish</a
+                  ><img
+                    src="https://flagcdn.com/es.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />
+                  Español</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  data-lang="sa"
+                  class="lang-option flex gap-2"
+                  data-flag="https://flagcdn.com/sa.svg"
+                  ><img
+                    src="https://flagcdn.com/sa.svg"
+                    alt="Arabic"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />
+                  Arabic</a
                 >
               </li>
             </ul>

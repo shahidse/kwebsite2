@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@700&family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./Resonance-logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./Resonance-logo.svg" type="image/x-icon" />
     <style>
       nav {
         background-color: #eff3ea;
@@ -25,12 +25,15 @@
         mobileMenu.classList.toggle("hidden");
       }
     </script>
+    <script src="./index.translation.js"></script>
+    <script src="./index.language.js"></script>
+    <link rel="stylesheet" href="./language-selector.css" />
   </head>
   <body class="bg-gray-50">
-    <nav class="bg-light relative fixed w-full z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Navigation Bar -->
+    <nav class="bg-light relative fixed w-full z-10">
+      <div class="max-w-7xl mx-auto px-4 lg:px-4">
         <div class="flex items-center justify-between h-24">
-          <!-- Logo -->
           <div class="flex items-center">
             <img
               src="./Resonance-logo.svg"
@@ -38,39 +41,40 @@
               class="h-[100px] w-[100px] md:h-[130px] md:w-[130px]"
             />
           </div>
-
-          <!-- Desktop Navigation -->
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="./index.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="home"
               >Home</a
             >
             <a
               href="./download.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="getApp"
               >Get App</a
             >
             <a
               href="./resources.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="resources"
               >Resources</a
             >
             <a
               href="./about.html"
               class="text-gray-700 hover:text-white transition-colors duration-200 text-[22px]"
+              data-lang="about"
               >About</a
             >
             <a
               class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity duration-200 flex items-center text-[22px]"
               href="./index.html#contact"
+              data-lang="contactUs"
             >
-              Contact Us
+              <span>Contact Us</span>
               <i class="fas fa-arrow-right ml-2"></i>
             </a>
           </div>
-
-          <!-- Mobile Menu Button -->
           <div class="md:hidden">
             <button
               onclick="toggleMenu()"
@@ -80,35 +84,38 @@
             </button>
           </div>
         </div>
-
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
           <div class="px-2 pt-2 pb-3 space-y-1">
             <a
               href="./index.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="home"
               >Home</a
             >
             <a
               href="./download.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="getApp"
               >Get App</a
             >
             <a
               href="./resources.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="resources"
               >Resources</a
             >
             <a
               href="./about.html"
               class="block text-black hover:text-white py-2 transition-colors duration-200 text-gray-700 text-[22px]"
+              data-lang="about"
               >About</a
             >
             <a
               class="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity duration-200 flex items-center justify-center text-gray-700 text-[22px]"
               href="./index.html#contact"
+              data-lang="contactUs"
             >
-              Contact Us
+              <span>Contact Us</span>
               <i class="fas fa-arrow-right ml-2"></i>
             </a>
           </div>
@@ -250,7 +257,10 @@
             class="bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <div class="p-6 text-center text-white">
-              <p class="mt-4 text-gray-400 text-left">
+              <p
+                class="mt-4 text-gray-400 text-left"
+                data-lang="resourcesCard1"
+              >
                 Yes, 429.62Hz and harmonics is recognized as a water frequency,
                 meaning it is believed to enhance the structuring, energy
                 coherence, and bioavailability of water. This frequency is
@@ -292,7 +302,10 @@
             class="bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <div class="p-6 text-center text-white">
-              <p class="mt-4 text-gray-400 text-left">
+              <p
+                class="mt-4 text-gray-400 text-left"
+                data-lang="resourcesCard2"
+              >
                 You know about probiotics, but do you know about Psychobiotics?
                 👉 Probiotics which act on the gut-brain connection to improve
                 mental wellbeing are known as Psychobiotics. 👉 Through the
@@ -316,13 +329,105 @@
       </div>
     </section>
 
+    <section>
+      <div class="fixed bottom-4 left-4 z-50">
+        <div class="relative inline-block">
+          <button id="language-toggle" class="language-button">
+            <img
+              src="https://flagcdn.com/us.svg"
+              alt="English"
+              class="w-6 h-6 rounded-full"
+              id="selected-flag"
+            />
+          </button>
+          <div id="language-dropdown" class="language-dropdown hidden">
+            <ul>
+              <li class="">
+                <a
+                  href="#"
+                  data-lang="en"
+                  class="lang-option flex gap-2"
+                  data-flag="https://flagcdn.com/us.svg"
+                  ><img
+                    src="https://flagcdn.com/us.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                  />English</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  data-lang="ur"
+                  class="lang-option flex gap-2"
+                  data-flag="https://flagcdn.com/pk.svg"
+                  ><img
+                    src="https://flagcdn.com/pk.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />Urdu</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  data-lang="fr"
+                  class="lang-option flex gap-2"
+                  data-flag="https://flagcdn.com/fr.svg"
+                  ><img
+                    src="https://flagcdn.com/fr.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />French</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  data-lang="es"
+                  class="lang-option flex gap-2"
+                  data-flag="https://flagcdn.com/es.svg"
+                  ><img
+                    src="https://flagcdn.com/es.svg"
+                    alt="English"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />
+                  Spanish</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  data-lang="sa"
+                  class="lang-option flex gap-2"
+                  data-flag="https://flagcdn.com/sa.svg"
+                  ><img
+                    src="https://flagcdn.com/sa.svg"
+                    alt="Arabic"
+                    class="w-6 h-6 rounded-full"
+                    id="selected-flag"
+                  />
+                  Arabic</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Footer Section -->
     <footer class="bg-gray-900 text-white py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
           <!-- Subscribe Form -->
-          <div class="">
-            <h3 class="text-2xl font-bold mb-4 whitespace-nowrap">
+          <div>
+            <h3
+              class="text-2xl font-bold mb-4 whitespace-nowrap"
+              data-lang="subscribe"
+            >
               Subscribe to Our Newsletter
             </h3>
             <form action="#" method="POST" class="flex space-x-4">
@@ -336,6 +441,7 @@
               <button
                 type="submit"
                 class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-lg font-semibold hover:opacity-90 transition-opacity duration-200"
+                data-lang="subscribeButton"
               >
                 Subscribe
               </button>
@@ -344,8 +450,10 @@
 
           <!-- Disclaimer Section -->
           <div>
-            <h3 class="text-2xl font-bold mb-4">Disclaimer</h3>
-            <p class="text-sm text-gray-400 text-xl">
+            <h3 class="text-2xl font-bold mb-4" data-lang="disclaimerTitle">
+              Disclaimer
+            </h3>
+            <p class="text-sm text-gray-400 text-xl" data-lang="disclaimerText">
               Resonance Healing is not intended to replace professional medical
               advice or approved treatments. It is not intended to diagnose, or
               treat any health condition.
@@ -354,7 +462,9 @@
 
           <!-- Social Links -->
           <div>
-            <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+            <h3 class="text-2xl font-bold mb-4" data-lang="followUs">
+              Follow Us
+            </h3>
             <div class="flex space-x-4">
               <a href="#" class="text-gray-400 hover:text-white">
                 <i class="fab fa-facebook-f text-2xl"></i>
@@ -373,7 +483,7 @@
 
           <!-- Copyright Section -->
           <div class="md:col-span-2 lg:col-span-1">
-            <p class="text-sm text-gray-400">
+            <p class="text-sm text-gray-400" data-lang="copyright">
               &copy; 2025 Resonance Healing. All rights reserved.
             </p>
           </div>

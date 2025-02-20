@@ -1,0 +1,28 @@
+.language-button {
+  background: linear-gradient(135deg, #f39595, #f5ed95, #a3f5a7, #99a8f6);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.language-dropdown {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem;
+  width: 120px;
+}
+.language-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.language-dropdown li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.language-dropdown li:hover {
+  background: #f3f3f3;
+}
